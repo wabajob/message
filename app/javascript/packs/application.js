@@ -19,4 +19,7 @@ require("jquery")
 // const imagePath = (name) => images(name, true)
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
 })
